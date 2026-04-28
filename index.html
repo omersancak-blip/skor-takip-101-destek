@@ -106,13 +106,17 @@
     <p>Evet, tamamen ücretsiz ve reklamsızdır.</p>
 
     <h3>Verilerim nerede saklanıyor?</h3>
-    <p>Tüm oyuncu isimleri ve skorlar <strong>sadece sizin cihazınızda</strong> saklanır. Herhangi bir sunucuya gönderilmez.</p>
+    <p>İki seçeneğiniz var:</p>
+    <ul>
+      <li><strong>Yerel Oyun (Offline):</strong> Oyuncu isimleri ve skorlar sadece sizin cihazınızda saklanır.</li>
+      <li><strong>Online Oyun (v2.0+):</strong> Online masa kurduğunuzda, masa verileri (kullanıcı adı, skorlar, ceza kayıtları) <strong>Google Firebase</strong> sunucularında saklanır — masadaki diğer oyuncuların gerçek zamanlı görmesi için.</li>
+    </ul>
 
     <h3>Uygulamayı silersem verilerim ne olur?</h3>
-    <p>Uygulamayı sildiğinizde tüm veriler cihazdan silinir. Geri yükleme seçeneği yoktur, bu yüzden silmeden önce önemli skorları not almanızı öneririz.</p>
+    <p>Uygulamayı sildiğinizde cihazdaki yerel veriler silinir. Online hesabınız (kullanıcı adı + masaları) Firebase'de korunur — istediğiniz zaman e-posta ile silinmesini talep edebilirsiniz.</p>
 
     <h3>İnternet bağlantısı gerekiyor mu?</h3>
-    <p>Hayır. Uygulama tamamen çevrimdışı çalışır.</p>
+    <p>Online oyun (çoklu cihaz senkronu) için <strong>internet gerekir</strong>. Yerel oyun (tek cihaz) çevrimdışı çalışır.</p>
 
     <h3>Face ID neden kullanılıyor?</h3>
     <p>Sadece <strong>admin paneli girişi</strong> için kullanılır. Face ID verileriniz Apple'ın Secure Enclave'inde saklanır, uygulama bu verilere erişemez.</p>
@@ -122,24 +126,50 @@
   </section>
 
   <section>
-    <h2>🔒 Gizlilik Politikası <span class="tag">Güncel</span></h2>
-    <p><em>Son güncelleme: 23 Nisan 2026</em></p>
+    <h2>🔒 Gizlilik Politikası <span class="tag">v2.0</span></h2>
+    <p><em>Son güncelleme: 28 Nisan 2026</em></p>
 
-    <p>Skor Takip 101 uygulamasını geliştiren Ömer Sancak olarak, kullanıcılarımızın gizliliğine değer veriyoruz. Bu gizlilik politikası, uygulamamızın hangi bilgileri topladığını (veya toplamadığını) şeffaf bir şekilde açıklar.</p>
+    <p>Skor Takip 101 uygulamasını geliştiren Ömer Sancak olarak, kullanıcılarımızın gizliliğine değer veriyoruz. Bu gizlilik politikası, uygulamamızın hangi bilgileri topladığını ve nasıl kullandığını şeffaf bir şekilde açıklar.</p>
 
     <h3>Topladığımız Bilgiler</h3>
-    <p><strong>Kısaca: Hiçbir kişisel veriniz bizimle paylaşılmaz.</strong></p>
-    <p>Uygulama, çalışması için aşağıdaki bilgileri <strong>sadece cihazınızda lokal olarak</strong> saklar:</p>
+    <p>Uygulama iki modda çalışır. Hangi modda hangi verilerin toplandığı:</p>
+
+    <h3>1) Yerel Oyun (Offline) Modunda</h3>
+    <p>Aşağıdaki bilgiler <strong>sadece cihazınızda lokal olarak</strong> saklanır, sunucuya gönderilmez:</p>
     <ul>
       <li>Eklediğiniz oyuncu isimleri</li>
       <li>Masa ve oyun bilgileri</li>
       <li>El ve set bazında skorlar</li>
       <li>Oyun süreleri</li>
     </ul>
-    <p>Bu bilgiler <strong>sunucularımıza gönderilmez</strong>, üçüncü taraflarla <strong>paylaşılmaz</strong>, analitik amaçlı <strong>kullanılmaz</strong>.</p>
+
+    <h3>2) Online Oyun Modunda (v2.0+)</h3>
+    <p>Çoklu cihaz senkronu için aşağıdaki veriler <strong>Google Firebase</strong> (Firebase Authentication + Cloud Firestore) bulut hizmetinde saklanır:</p>
+    <ul>
+      <li><strong>Hesap bilgisi:</strong> Seçtiğiniz kullanıcı adı (username) ve şifresi (Firebase tarafından hash'lenmiş olarak saklanır, biz görmeyiz)</li>
+      <li><strong>Masa ve oyun verileri:</strong> Oluşturduğunuz/dahil olduğunuz online masaların isimleri, oyuncuların kullanıcı adları, el bazında skorlar, ceza kayıtları, set sonuçları, oyunun başlama/güncelleme tarihleri</li>
+    </ul>
+    <p>Bu veriler <strong>uygulamanın çalışması için zorunludur</strong> (canlı senkron), <strong>üçüncü taraflarla paylaşılmaz</strong>, <strong>reklam veya pazarlama için kullanılmaz</strong>, <strong>analitik amaçla işlenmez</strong>.</p>
+
+    <h3>Toplanan Verilerin Apple Tarafından Sınıflandırılması</h3>
+    <p>App Store gizlilik etiketlemelerine göre uygulamamız aşağıdaki veri tiplerini toplar:</p>
+    <ul>
+      <li><strong>User Content - Gameplay Content:</strong> Oyun verileri (skorlar, masa bilgileri, ceza kayıtları). Kullanıcı kimliğine bağlı, sadece uygulama işlevselliği için kullanılır.</li>
+      <li><strong>Identifiers - User ID:</strong> Kullanıcı adınız (username). Kullanıcı kimliğine bağlı, sadece uygulama işlevselliği için kullanılır.</li>
+    </ul>
+    <p>Bu veriler <strong>tracking (kullanıcı izleme) için kullanılmaz</strong>.</p>
+
+    <h3>Veri Güvenliği</h3>
+    <p>Online veriler:</p>
+    <ul>
+      <li><strong>HTTPS</strong> üzerinden şifrelenmiş olarak iletilir</li>
+      <li><strong>Google Cloud Platform</strong> altyapısında saklanır (Firebase, Avrupa veri merkezi)</li>
+      <li>Firebase güvenlik kuralları ile <strong>sadece kayıtlı kullanıcılar</strong> tarafından okunabilir</li>
+      <li>Şifreler asla düz metin olarak saklanmaz (Firebase Authentication şifreleme + hash)</li>
+    </ul>
 
     <h3>Face ID Kullanımı</h3>
-    <p>Uygulama, admin paneli girişini güvence altına almak için Face ID (veya Touch ID) kimlik doğrulaması kullanabilir. Bu işlem tamamen Apple'ın güvenli donanımı tarafından yürütülür:</p>
+    <p>Uygulama, opsiyonel admin paneli girişi için Face ID (veya Touch ID) kullanabilir. Bu işlem tamamen Apple'ın güvenli donanımı tarafından yürütülür:</p>
     <ul>
       <li>Face ID biyometrik verileri Apple'ın Secure Enclave'inde saklanır</li>
       <li>Uygulama <strong>yalnızca kimlik doğrulama sonucunu</strong> (başarılı/başarısız) alır</li>
@@ -147,22 +177,24 @@
     </ul>
 
     <h3>Üçüncü Taraf Hizmetler</h3>
-    <p>Uygulama hiçbir üçüncü taraf analitik, reklam, sosyal medya veya benzer servisi kullanmaz. Cihazınızdan dışarıya hiçbir ağ isteği yapılmaz.</p>
+    <p>Uygulama yalnızca <strong>Google Firebase</strong> (Authentication, Firestore) bulut hizmetlerini kullanır — bu hizmet Google'a ait olup gizlilik politikasına <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">buradan</a> ulaşabilirsiniz.</p>
+    <p>Reklam, analitik veya pazarlama amaçlı hiçbir üçüncü taraf SDK kullanılmaz.</p>
 
     <h3>Çocukların Gizliliği</h3>
-    <p>Uygulama 4 yaş ve üzeri herkes için uygundur. Çocuklardan hiçbir kişisel veri toplanmaz.</p>
-
-    <h3>Veri Güvenliği</h3>
-    <p>Verileriniz cihazınızın kendi güvenlik sistemleri (iOS şifrelemesi, Face ID/Touch ID) ile korunur. Uygulama, iOS tarafından sağlanan <code>shared_preferences</code> API'sini kullanır.</p>
+    <p>Uygulama 4 yaş ve üzeri herkes için uygundur. 13 yaş altı çocukların ebeveyn izni olmadan kayıt olmaması önerilir. Çocuklardan ek kişisel veri (ad, soyad, e-posta, telefon) toplanmaz.</p>
 
     <h3>Verilerinizin Silinmesi</h3>
-    <p>Uygulama içinde "Oyuncuları Sil" veya "Masayı Temizle" gibi işlemlerle verilerinizi kolayca silebilirsiniz. Ayrıca uygulamayı cihazınızdan kaldırdığınızda tüm veriler silinir.</p>
+    <p>Hesabınızı veya verilerinizi silmek için iki seçenek:</p>
+    <ul>
+      <li>Uygulama içinde admin paneli üzerinden yerel verileri silebilirsiniz</li>
+      <li>Online hesabınızın (kullanıcı adı + masaları) silinmesi için <a href="mailto:omer.sancak@hotmail.com">omer.sancak@hotmail.com</a> adresine yazabilirsiniz, talebiniz <strong>30 gün içinde</strong> yerine getirilir</li>
+    </ul>
 
     <h3>Gizlilik Politikası Değişiklikleri</h3>
     <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler bu sayfa üzerinden duyurulacaktır. Son güncelleme tarihi sayfanın üstünde belirtilir.</p>
 
     <h3>İletişim</h3>
-    <p>Gizlilik ile ilgili sorularınız için: <a href="mailto:omer.sancak@hotmail.com">omer.sancak@hotmail.com</a></p>
+    <p>Gizlilik ile ilgili sorularınız veya veri silme talepleriniz için: <a href="mailto:omer.sancak@hotmail.com">omer.sancak@hotmail.com</a></p>
   </section>
 
   <footer>
