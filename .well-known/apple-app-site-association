@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["W4FQR4LB8V.com.omersancak.skortakip101"],
+        "components": [
+          { "/": "/masa/*", "comment": "Masa linki" }
+        ]
+      }
+    ]
+  }
+}
